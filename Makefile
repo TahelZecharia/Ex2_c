@@ -4,9 +4,10 @@ OBJECT_MAIN=main.o
 OBJECT_MY_MAT=my_mat.o
 FLAGS=-g -Wall
 
-all: connections
-connections: $(OBJECT_MAIN) lib_mat.a
+all: connections lib_mat
+connections: $(OBJECT_MAIN) lib_mat
 	$(CC) $(FLAGS) -o connections $(OBJECT_MAIN) lib_mat.a 
+lib_mat: lib_mat.a
 lib_mat.a: $(OBJECT_MY_MAT) 
 	$(AR) -rcs lib_mat.a $(OBJECT_MY_MAT) 
 main.o: main.c my_mat.h  
