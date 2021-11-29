@@ -30,19 +30,19 @@ int dinamicProgramMatrics(int MATRIX[10][10]){
         }
         
     }
-    return 0;
+    return 1;
 }
 
 int thereIsRoute(int MATRIX[10][10], int i, int j){
     if (MATRIX[i][j] == 0) printf("False\n");
     else printf("True\n");
-    return 0;
+    return 1;
 }
 
 int bestRoute(int MATRIX[10][10], int i, int j){
     if (MATRIX[i][j] == 0) printf("%d\n", -1);
     else printf("%d\n", MATRIX[i][j]);
-    return 0;
+    return 1;
 }
 
 // int main(){
